@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f7f7f7;
+}
+
+.voucher {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #fff;
+  border: 2px solid #e53935;
+}
+
+.voucher__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.voucher__title {
+  text-align: center;
+  flex: 1 1 320px;
+}
+
+.voucher__company {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.voucher__name {
+  margin-top: 8px;
+  font-size: 24px;
+  color: #c62828;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.voucher__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 280px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.field small {
+  color: #888;
+}
+
+.field input,
+.field textarea {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.field--vertical {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.voucher__parties {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 20px;
+  border: 1px solid #e53935;
+}
+
+.party {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  border-right: 1px solid #e53935;
+}
+
+.party:last-child {
+  border-right: none;
+}
+
+.party__label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+  padding: 12px 4px;
+  color: #c62828;
+  border-right: 1px solid #e53935;
+}
+
+.party__content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.party__content--readonly .static-text {
+  color: #444;
+}
+
+.voucher__table {
+  margin-top: 20px;
+  border: 1px solid #e53935;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background: #fdecec;
+  color: #c62828;
+  border-bottom: 1px solid #e53935;
+  padding: 8px;
+}
+
+tbody td {
+  border-top: 1px solid #e53935;
+  border-right: 1px solid #e53935;
+  padding: 6px;
+}
+
+tbody td:last-child {
+  border-right: none;
+}
+
+tbody input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.voucher__totals {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border: 1px solid #e53935;
+  border-top: none;
+  padding: 10px;
+  gap: 12px;
+}
+
+.voucher__remark {
+  border: 1px solid #e53935;
+  border-top: none;
+  padding: 10px;
+}
+
+.voucher__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  gap: 16px;
+}
+
+.stamp {
+  color: #c62828;
+  font-weight: 600;
+}
+
+.voucher__actions {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#validate-btn {
+  align-self: flex-start;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background: #c62828;
+  color: #fff;
+  cursor: pointer;
+}
+
+.error-list {
+  color: #c62828;
+  font-size: 14px;
+}
+
+.error-list--fail ul {
+  margin: 4px 0 0;
+  padding-left: 18px;
+}
